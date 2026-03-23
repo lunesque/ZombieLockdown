@@ -1,3 +1,4 @@
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
@@ -7,25 +8,26 @@ public class TriggerController : MonoBehaviour
     private static readonly string PLAYER_TAG = "Player";
     private static readonly string INTERACT_ACTION = "Interact";
 
-    private InputAction m_InteractAction;
+    private StarterAssetsInputs m_Input;
 
     public bool CanInteract { get; protected set; } = true;
-
-    private void Start()
-    {
-        m_InteractAction = InputSystem.actions.FindAction(INTERACT_ACTION);
-    }
-
+    
     private void OnTriggerStay(Collider other)
     {
-        Assert.IsNotNull(m_InteractAction, $"Input Action {INTERACT_ACTION} is missing. Please add it and its bindings to the InputSystem_Actions asset.");
+        if (!other.CompareTag(PLAYER_TAG)) return;
 
-        if (other.CompareTag(PLAYER_TAG) && m_InteractAction.IsPressed() && CanInteract)
+        if (m_Input == null)
+            m_Input = other.GetComponent<StarterAssetsInputs>();
+
+        Assert.IsNotNull(m_Input, "StarterAssetsInputs not found on Player.");
+
+        if (m_Input.interact && CanInteract)
         {
+            m_Input.interact = false;
             Interact();
         }
     }
-
+    
     protected virtual void Interact() 
     {
     }

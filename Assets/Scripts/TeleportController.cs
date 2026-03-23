@@ -4,6 +4,7 @@ public class TeleportController : MonoBehaviour
 {
     [SerializeField] private GameObject m_Destination;
     private CharacterController m_CharacterController;
+    private TriggerController m_DoorController;
  
     private void OnTriggerEnter(Collider other)
     {
