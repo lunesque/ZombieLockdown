@@ -4344,6 +4344,11 @@ Transform:
   - {fileID: 1602033922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &624774743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8762286023885395077, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+  m_PrefabInstance: {fileID: 254248508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &625367343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7019,6 +7024,7 @@ Transform:
   - {fileID: 670838497}
   - {fileID: 1412832149}
   - {fileID: 1945262662}
+  - {fileID: 1269016490}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1128209169 stripped
@@ -7322,6 +7328,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76e4595439d1144bbb7fd974456cca6a, type: 3}
+--- !u!1 &1269016489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269016490}
+  - component: {fileID: 1269016491}
+  m_Layer: 0
+  m_Name: SpoutSender_GameView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1269016490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269016489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1127353316}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269016491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269016489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45099d624c1e6c14e9514f4e5ea1ed9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Klak.Spout.Runtime::Klak.Spout.SpoutSender
+  _spoutName: Game View
+  _keepAlpha: 0
+  _captureMethod: 0
+  _sourceCamera: {fileID: 0}
+  _sourceTexture: {fileID: 0}
+  _resources: {fileID: 11400000, guid: f449ebbe2051c2e4d993eaa773a410de, type: 2}
 --- !u!1001 &1282141434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8697,9 +8753,9 @@ MonoBehaviour:
   localPort: 9010
   serverName: Unity-OSCQuery
   rootObject: {fileID: 1012665669}
-  objectFilterMode: 1
+  objectFilterMode: 2
   filteredObjects:
-  - {fileID: 1977549753}
+  - {fileID: 624774743}
   componentFilterMode: 2
   filteredComponentNames:
   - MeshRenderer
@@ -8708,7 +8764,7 @@ MonoBehaviour:
   - MeshCollider
   excludeInternalUnityParams: 0
   excludeGlobalTransformParams: 1
-  excludeLocalTransformParams: 0
+  excludeLocalTransformParams: 1
   excludeThisObject: 1
 --- !u!4 &1412832149
 Transform:
@@ -11188,11 +11244,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
---- !u!1 &1977549753 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 1977549752}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1985174671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dde06d9575c954d4cbc2baefa8625da9, type: 3}
