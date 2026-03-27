@@ -583,6 +583,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bb7dbdd8fe8a3ee4b98492b4ccb42aad, type: 2}
+    - target: {fileID: -5076484507258936684, guid: 8b19a9036c8e80240a2be28b9b8e2483, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -4278131953222534254, guid: 8b19a9036c8e80240a2be28b9b8e2483, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -656,7 +660,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: bb7dbdd8fe8a3ee4b98492b4ccb42aad, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5392398322951045289, guid: 8b19a9036c8e80240a2be28b9b8e2483, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b19a9036c8e80240a2be28b9b8e2483, type: 3}
@@ -5716,7 +5721,7 @@ MonoBehaviour:
   - MeshCollider
   excludeInternalUnityParams: 0
   excludeGlobalTransformParams: 1
-  excludeLocalTransformParams: 0
+  excludeLocalTransformParams: 1
   excludeThisObject: 1
 --- !u!1 &1038865699
 GameObject:
