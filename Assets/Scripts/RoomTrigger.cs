@@ -1,46 +1,23 @@
+using OscJack;
 using UnityEngine;
 
 public class RoomTrigger : MonoBehaviour
 {
-    [Header("Assign these from the Room's children")]
-    [SerializeField] private GameObject m_Ceiling;
-    [SerializeField] private GameObject m_CeilingPlane;
-    private RoomController m_RoomController;
-
-
-    private void Start()
-    {
-        m_RoomController = GetComponent<RoomController>();
-    }
-    public void ShowRoom()
-    {
-        if (m_Ceiling)
-        {
-            m_Ceiling.SetActive(false);
-        }
-
-        if (m_CeilingPlane)
-        {
-            m_CeilingPlane.SetActive(true);
-        }
-    }
+    [SerializeField] private string m_OSCAddress = "/room";
+    [SerializeField] private string m_OSCHost = "127.0.0.1";
+    [SerializeField] private int m_OSCPort = 9000;
  
-    public void HideRoom()
+    private OscClient m_OSCClient;
+ 
+    private void Awake()
     {
-        if (m_Ceiling)
-        {
-            m_Ceiling.SetActive(true);
-        }
-
-        if (m_CeilingPlane)
-        {
-            m_CeilingPlane.SetActive(false);
-        }
+        m_OSCClient = new OscClient(m_OSCHost, m_OSCPort);
     }
  
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        m_RoomController.SetActiveRoom(this);
+        m_OSCClient.Send(m_OSCAddress, 1);
     }
+
 }
