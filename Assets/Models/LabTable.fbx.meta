@@ -13,12 +13,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Boards
-    second: {fileID: 2100000, guid: 8a7abbefa1b118c479d81c666e39f421, type: 2}
+    second: {fileID: 2100000, guid: 6c52fa20ae52cd843bc0ad4d17e36eaf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mid-side table
-    second: {fileID: 2100000, guid: bb7dbdd8fe8a3ee4b98492b4ccb42aad, type: 2}
+    second: {fileID: -1580535799172915004, guid: 8b19a9036c8e80240a2be28b9b8e2483, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
