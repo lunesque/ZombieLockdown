@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class TriggerController : MonoBehaviour
 {
     private static readonly string PLAYER_TAG = "Player";
+    
     //private static readonly string INTERACT_ACTION = "Interact";
 
     private StarterAssetsInputs m_Input;
@@ -16,8 +17,11 @@ public class TriggerController : MonoBehaviour
     {
         if (!other.CompareTag(PLAYER_TAG)) return;
 
-        if (m_Input == null)
+        if (m_Input == null) 
+        {
             m_Input = other.GetComponent<StarterAssetsInputs>();
+        }
+            
 
         Assert.IsNotNull(m_Input, "StarterAssetsInputs not found on Player.");
 
@@ -36,4 +40,5 @@ public class TriggerController : MonoBehaviour
     {
         CanInteract = false;
     }
+    
 }

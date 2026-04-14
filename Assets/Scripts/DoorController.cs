@@ -6,6 +6,13 @@ public class DoorController : TriggerController
 
     [SerializeField] private Animator m_Animator;
     [SerializeField] private ItemController m_ItemController;
+    [SerializeField] private AudioClip m_Sound;
+    private AudioSource m_AudioSource;
+    
+    private void Awake()
+    {
+        m_AudioSource = GetComponent<AudioSource>();
+    }
 
     protected override void Interact()
     {
@@ -28,7 +35,9 @@ public class DoorController : TriggerController
         }
 
         m_Animator.SetBool(IS_OPEN_PARAMETER, true);
-
+        m_AudioSource.clip = m_Sound;
+        m_AudioSource.Play();
+        
         return true;
     }
 }
