@@ -22,7 +22,6 @@ public class CameraController : MonoBehaviour
 #if ENABLE_INPUT_SYSTEM
         m_PlayerInput = GetComponent<PlayerInput>();
 #endif
-        // m_SwitchAction.performed += OnSwitchActionPerformed;
     }
 
     private void Update()

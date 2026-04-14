@@ -21,9 +21,8 @@ public class DoorController : TriggerController
         {
             if (!InventorySystem.Instance.HasItem(m_ItemController.UniqueID))
             {
-                /*
                 UISystem.Instance.ShowPlayerWarning("Door is <b>locked</b>. You need to find the <b>key</b>.");
-                */
+
                 return false;
             }
         }

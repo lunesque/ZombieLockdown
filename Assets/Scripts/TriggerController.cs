@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class TriggerController : MonoBehaviour
 {
     private static readonly string PLAYER_TAG = "Player";
-    private static readonly string INTERACT_ACTION = "Interact";
+    //private static readonly string INTERACT_ACTION = "Interact";
 
     private StarterAssetsInputs m_Input;
 
